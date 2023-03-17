@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,6 +10,14 @@ namespace Dash.Draw.Gameplay
         private Material _material;
         private static readonly int Color1 = Shader.PropertyToID("_Color");
         private static readonly int MainTex = Shader.PropertyToID("_MainTex");
+
+        private void Start()
+        {
+            if (!TryGetComponent(out Collider _))
+            {
+                gameObject.AddComponent<BoxCollider>();
+            }
+        }
 
         public void Paint(PaletteItemView.PaletteItem paletteItem)
         {
