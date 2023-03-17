@@ -18,4 +18,4 @@ MonoBehaviour:
   - {r: 0, g: 0, b: 0, a: 0}
   - {r: 0, g: 0, b: 0, a: 0}
   _textures:
-  - {fileID: 0}
+  - {fileID: 2800000, guid: 83f280e614be1c94ba7a9f691fda4a8c, type: 3}

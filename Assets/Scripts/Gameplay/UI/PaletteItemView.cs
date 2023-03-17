@@ -9,13 +9,13 @@ namespace Dash.Draw.Gameplay
     public class PaletteItemView : MonoBehaviour
     {
         public struct PaletteItem {
-            private Color _color;
-            private Texture _texture;
+            public Color Color;
+            public Texture2D Texture;
 
-            public PaletteItem(Color color, Texture texture = null)
+            public PaletteItem(Color color, Texture2D texture = null)
             {
-                _color = color;
-                _texture = texture;
+                Color = color;
+                Texture = texture;
             }
         }
         
@@ -36,9 +36,24 @@ namespace Dash.Draw.Gameplay
             
         }
 
-        public void Init(Color color, Texture texture = null)
+        public void Init(Color color, Texture2D texture = null)
         {
             _paletteItem = new PaletteItem(color, texture);
+            SetItem(_paletteItem);
+        }
+
+        private void SetItem(PaletteItem paletteItem)
+        {
+            _colorImage.color = paletteItem.Color;
+            if (null != paletteItem.Texture)
+            {
+                Rect rect = new Rect(0, 0, paletteItem.Texture.width, paletteItem.Texture.height);
+                _textureImage.sprite = Sprite.Create(paletteItem.Texture, rect, new Vector2(0.5f,0.5f),1);
+            }
+            else
+            {
+                _textureImage.enabled = false;
+            }
         }
     }
 }

@@ -8,9 +8,9 @@ namespace Dash.Draw.Gameplay
     public class PaletteScriptableObject : ScriptableObject
     {
         [SerializeField] private Color[] _colors;
-        [SerializeField] private Texture[] _textures;
+        [SerializeField] private Texture2D[] _textures;
 
         public Color[] Colors => _colors;
-        public Texture[] Textures => _textures;
+        public Texture2D[] Textures => _textures;
     }
 }
