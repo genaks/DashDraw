@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 7520024484421762235}
   - component: {fileID: 7520024484421762236}
   - component: {fileID: 7520024484421762237}
-  - component: {fileID: 7520024484421762234}
   m_Layer: 0
   m_Name: Right Arm
   m_TagString: Untagged
@@ -98,18 +97,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7520024484421762234
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7520024484421762239}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c540fd462adc4d4eb53c4168c807365, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7520024484519455577
 GameObject:
   m_ObjectHideFlags: 0
@@ -122,7 +109,6 @@ GameObject:
   - component: {fileID: 7520024484519455589}
   - component: {fileID: 7520024484519455590}
   - component: {fileID: 7520024484519455591}
-  - component: {fileID: 7520024484519455588}
   m_Layer: 0
   m_Name: Left Leg
   m_TagString: Untagged
@@ -208,18 +194,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7520024484519455588
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7520024484519455577}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c540fd462adc4d4eb53c4168c807365, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7520024484818144565
 GameObject:
   m_ObjectHideFlags: 0
@@ -232,7 +206,6 @@ GameObject:
   - component: {fileID: 7520024484818144561}
   - component: {fileID: 7520024484818144562}
   - component: {fileID: 7520024484818144563}
-  - component: {fileID: 7520024484818144560}
   m_Layer: 0
   m_Name: Face
   m_TagString: Untagged
@@ -318,18 +291,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7520024484818144560
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7520024484818144565}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c540fd462adc4d4eb53c4168c807365, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7520024484855878814
 GameObject:
   m_ObjectHideFlags: 0
@@ -342,7 +303,6 @@ GameObject:
   - component: {fileID: 7520024484855878810}
   - component: {fileID: 7520024484855878811}
   - component: {fileID: 7520024484855878812}
-  - component: {fileID: 7520024484855878809}
   m_Layer: 0
   m_Name: Right Leg
   m_TagString: Untagged
@@ -428,18 +388,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7520024484855878809
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7520024484855878814}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c540fd462adc4d4eb53c4168c807365, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7520024485126873080
 GameObject:
   m_ObjectHideFlags: 0
@@ -452,7 +400,6 @@ GameObject:
   - component: {fileID: 7520024485126872580}
   - component: {fileID: 7520024485126872581}
   - component: {fileID: 7520024485126872582}
-  - component: {fileID: 7520024485126872579}
   m_Layer: 0
   m_Name: Left Arm
   m_TagString: Untagged
@@ -538,18 +485,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7520024485126872579
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7520024485126873080}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c540fd462adc4d4eb53c4168c807365, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7520024485885474551
 GameObject:
   m_ObjectHideFlags: 0
@@ -559,8 +494,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7520024485885474550}
-  - component: {fileID: 7520024485885474549}
-  - component: {fileID: 7520024485885474548}
   m_Layer: 0
   m_Name: ColoringObject
   m_TagString: Untagged
@@ -589,30 +522,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7520024485885474549
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7520024485885474551}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8a2ee848322dea45b5af0350a30e85c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &7520024485885474548
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7520024485885474551}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c625f85b746ae8046a5d85c7f667625d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7520024486533115250
 GameObject:
   m_ObjectHideFlags: 0
@@ -625,7 +534,6 @@ GameObject:
   - component: {fileID: 7520024486533115262}
   - component: {fileID: 7520024486533115263}
   - component: {fileID: 7520024486533115248}
-  - component: {fileID: 7520024486533115261}
   m_Layer: 0
   m_Name: Torso
   m_TagString: Untagged
@@ -711,15 +619,3 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7520024486533115261
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7520024486533115250}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c540fd462adc4d4eb53c4168c807365, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

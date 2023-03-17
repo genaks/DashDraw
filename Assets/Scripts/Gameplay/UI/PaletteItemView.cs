@@ -21,6 +21,7 @@ namespace Dash.Draw.Gameplay
         
         [SerializeField] private Image _colorImage;
         [SerializeField] private Image _textureImage;
+        [SerializeField] private Image _selectionImage;
 
         private PaletteItem _paletteItem;
         private int _index;
@@ -29,12 +30,13 @@ namespace Dash.Draw.Gameplay
 
         public void Select()
         {
+            _selectionImage.enabled = true;
             OnPaletteItemSelected?.Invoke(_index, _paletteItem);
         }
 
         public void Unselect()
         {
-            //TODO: hide selection image on unselect
+            _selectionImage.enabled = false;
         }
 
         public void Init(int index, Color color, Texture2D texture = null)

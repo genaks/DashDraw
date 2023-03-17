@@ -43,6 +43,11 @@ namespace Dash.Draw.Gameplay
                 paletteItemView.OnPaletteItemSelected += UpdateSelectedPaletteItem;
                 _paletteItemViews.Add(paletteItemView);
             }
+
+            if (_paletteItemViews.Count > 0)
+            {
+                _paletteItemViews[0].Select();
+            }
         }
 
         private void OnDestroy()

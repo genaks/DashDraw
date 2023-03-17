@@ -30,6 +30,14 @@ namespace Dash.Draw.Gameplay
             {
                 Debug.LogError("[ColorComponent::Start] Couldn't retrieve the color palette service");
             }
+
+            foreach (Transform child in transform)
+            {
+                if (!child.gameObject.TryGetComponent(out ColoringComponent _))
+                {
+                    child.gameObject.AddComponent<ColoringComponent>();
+                }
+            }
         }
         
         private void OnDestroy()
