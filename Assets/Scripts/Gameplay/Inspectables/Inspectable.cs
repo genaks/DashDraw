@@ -69,9 +69,11 @@ namespace Dash.Draw.Gameplay
             if (Math.Abs(mouseXDiff) < 1)
                 return;
 
-            var rotationChange = mouseXDiff / 2;
-			
-            transform.rotation = Quaternion.Euler(transform.rotation.x, _initialRotationY - rotationChange, transform.rotation.z);
+            var rotationChange = mouseXDiff;
+
+            var rotation = transform.rotation;
+            rotation = Quaternion.Euler(rotation.x, _initialRotationY - rotationChange, rotation.z);
+            transform.rotation = rotation;
         }
 
         private void EnableDrag()

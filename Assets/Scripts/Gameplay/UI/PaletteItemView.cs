@@ -34,7 +34,7 @@ namespace Dash.Draw.Gameplay
 
         public void Unselect()
         {
-            
+            //TODO: hide selection image on unselect
         }
 
         public void Init(int index, Color color, Texture2D texture = null)

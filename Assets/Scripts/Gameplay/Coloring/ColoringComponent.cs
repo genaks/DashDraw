@@ -14,14 +14,7 @@ namespace Dash.Draw.Gameplay
         {
             _material = GetComponent<Renderer>().material;
             _material.SetColor(Color1, paletteItem.Color);
-            if (null != paletteItem.Texture)
-            {
-                _material.SetTexture(MainTex, paletteItem.Texture);
-            }
-            else
-            {
-                _material.SetTexture(MainTex, null);
-            }
+            _material.SetTexture(MainTex, null != paletteItem.Texture ? paletteItem.Texture : null);
         }
     }
 }
