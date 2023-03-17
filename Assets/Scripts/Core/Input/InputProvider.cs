@@ -12,12 +12,10 @@ namespace Dash.Draw.Core
 
         private readonly List<IInputSource> _inputSources = new();
         
-        public bool InputEnabled { get; private set; }
         
         private void Awake()
         {
             ServiceLocator.Instance.Register(this);
-            InputEnabled = true;
         }
 
         private void OnDestroy()
@@ -78,11 +76,6 @@ namespace Dash.Draw.Core
                 return;
             
             OnButtonRelease?.Invoke(inputKey);
-        }
-
-        public void EnableInput(bool enable)
-        {
-            InputEnabled = enable;
         }
     }
 }

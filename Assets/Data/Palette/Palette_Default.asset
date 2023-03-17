@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Palette_Default
   m_EditorClassIdentifier: 
   _colors:
-  - {r: 0, g: 0, b: 0, a: 0}
-  - {r: 0, g: 0, b: 0, a: 0}
-  - {r: 0, g: 0, b: 0, a: 0}
-  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 1, g: 0.6839622, b: 0.6839622, a: 1}
+  - {r: 0.8486974, g: 1, b: 0.36320752, a: 1}
+  - {r: 0.3820755, g: 1, b: 0.96136206, a: 1}
+  - {r: 1, g: 0.41037738, b: 0.7530248, a: 1}
   _textures:
   - {fileID: 2800000, guid: 83f280e614be1c94ba7a9f691fda4a8c, type: 3}

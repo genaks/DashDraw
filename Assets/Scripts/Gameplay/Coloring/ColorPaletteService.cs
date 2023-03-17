@@ -13,6 +13,8 @@ namespace Dash.Draw.Gameplay
 
         private List<PaletteItemView> _paletteItemViews = new();
         private PaletteItemView.PaletteItem _paletteItem;
+
+        public PaletteItemView.PaletteItem PaletteItem => _paletteItem;
         
         private void Awake()
         {
@@ -54,6 +56,7 @@ namespace Dash.Draw.Gameplay
 
         private void UpdateSelectedPaletteItem(int index, PaletteItemView.PaletteItem paletteItem)
         {
+            _paletteItem = paletteItem;
             for (int i = 0; i < _paletteItemViews.Count; i++)
             {
                 if (i != index)
