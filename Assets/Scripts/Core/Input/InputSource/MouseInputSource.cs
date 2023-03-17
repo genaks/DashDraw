@@ -11,16 +11,10 @@ namespace Dash.Draw.Core
     [RequireComponent(typeof(InputProvider))]
     public class MouseInputSource : MonoBehaviour, IInputSource
     {
-        public event Action<Vector2, InputKey> OnMoveAction;
         public event Action<InputKey> OnButtonAction;
         public event Action<InputKey> OnButtonRelease;
 
-        [Range(0, 1)]
-        [SerializeField] private int _playerIndex;
-		
         private InputProvider _inputProvider;
-        private Vector2 _currentInput = Vector2.zero;
-        private bool _modified = false;
 		
         public void Awake()
         {
@@ -36,13 +30,28 @@ namespace Dash.Draw.Core
         public void ButtonAction(InputAction.CallbackContext context)
         {
             if ((context.interaction is PressInteraction) && context.performed)
-                OnButtonAction?.Invoke(InputKey.MouseLeftKey);
+                OnButtonAction?.Invoke(GetInputKey(context.control.name));
         }
 
         public void ButtonRelease(InputAction.CallbackContext context)
         {
             if ((context.interaction is PressInteraction) && context.performed)
-                OnButtonRelease?.Invoke(InputKey.MouseLeftKey);
+                OnButtonRelease?.Invoke(GetInputKey(context.control.name));
+        }
+
+        private InputKey GetInputKey(string inputKeyName)
+        {
+            InputKey inputKey = InputKey.MouseLeftKey;
+            switch (inputKeyName)
+            {
+                case "leftButton" :
+                    inputKey = InputKey.MouseLeftKey;
+                    break;
+                case "middleButton" :
+                    inputKey = InputKey.MiddleKey;
+                    break;
+            }
+            return inputKey;
         }
     }
 }

@@ -8,9 +8,7 @@ namespace Dash.Draw.Core
     public class InputProvider : MonoBehaviour, IGameService
     {
         public event Action<InputKey> OnButtonAction;
-
         public event Action<InputKey> OnButtonRelease;
-        public event Action<Vector2, InputKey> OnMoveAction;
 
         private readonly List<IInputSource> _inputSources = new();
         
