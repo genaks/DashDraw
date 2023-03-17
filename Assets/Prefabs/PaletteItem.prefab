@@ -259,8 +259,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1736532902123253830}
-        m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
+      - m_Target: {fileID: 5978470020524677984}
+        m_TargetAssemblyTypeName: Dash.Draw.Gameplay.PaletteItemView, Dash.Draw.Gameplay
         m_MethodName: Select
         m_Mode: 1
         m_Arguments:

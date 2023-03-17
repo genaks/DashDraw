@@ -10,6 +10,9 @@ namespace Dash.Draw.Gameplay
     {
         [SerializeField] private PaletteScriptableObject _paletteScriptableObject;
         [SerializeField] private PaletteItemView _paletteItemView;
+
+        private List<PaletteItemView> _paletteItemViews = new();
+        private PaletteItemView.PaletteItem _paletteItem;
         
         private void Awake()
         {
@@ -21,7 +24,9 @@ namespace Dash.Draw.Gameplay
             foreach (var color in _paletteScriptableObject.Colors)
             {
                 PaletteItemView paletteItemView = Instantiate(_paletteItemView, transform);
-                paletteItemView.Init(color);
+                paletteItemView.Init(_paletteItemViews.Count, color);
+                paletteItemView.OnPaletteItemSelected += UpdateSelectedPaletteItem;
+                _paletteItemViews.Add(paletteItemView);
             }
             foreach (var texture in _paletteScriptableObject.Textures)
             {
@@ -32,7 +37,29 @@ namespace Dash.Draw.Gameplay
                     return;
                 }
                 PaletteItemView paletteItemView = Instantiate(_paletteItemView, transform);
-                paletteItemView.Init(Color.white, texture);
+                paletteItemView.Init(_paletteItemViews.Count, Color.white, texture);
+                paletteItemView.OnPaletteItemSelected += UpdateSelectedPaletteItem;
+                _paletteItemViews.Add(paletteItemView);
+            }
+        }
+
+        private void OnDestroy()
+        {
+            ServiceLocator.Instance.Unregister<ColorPaletteService>();
+            foreach (var paletteItemView in _paletteItemViews)
+            {
+                paletteItemView.OnPaletteItemSelected -= UpdateSelectedPaletteItem;
+            }
+        }
+
+        private void UpdateSelectedPaletteItem(int index, PaletteItemView.PaletteItem paletteItem)
+        {
+            for (int i = 0; i < _paletteItemViews.Count; i++)
+            {
+                if (i != index)
+                {
+                    _paletteItemViews[i].Unselect();
+                }
             }
         }
     }

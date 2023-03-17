@@ -23,12 +23,13 @@ namespace Dash.Draw.Gameplay
         [SerializeField] private Image _textureImage;
 
         private PaletteItem _paletteItem;
+        private int _index;
         
-        public static event Action<PaletteItem> OnPaletteItemSelected;
+        public event Action<int, PaletteItem> OnPaletteItemSelected;
 
         public void Select()
         {
-            OnPaletteItemSelected?.Invoke(_paletteItem);
+            OnPaletteItemSelected?.Invoke(_index, _paletteItem);
         }
 
         public void Unselect()
@@ -36,8 +37,9 @@ namespace Dash.Draw.Gameplay
             
         }
 
-        public void Init(Color color, Texture2D texture = null)
+        public void Init(int index, Color color, Texture2D texture = null)
         {
+            _index = index;
             _paletteItem = new PaletteItem(color, texture);
             SetItem(_paletteItem);
         }
